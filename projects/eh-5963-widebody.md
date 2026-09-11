@@ -1,24 +1,41 @@
 # EH-5963 wide-body aircraft design study
 
-**Aug 2023 to Feb 2024 · aerospace vehicle design, Institute of Space Technology**
+**Aerospace vehicle design, Institute of Space Technology · August 2023 to February 2024**
 
-<img src="../images/proj_a380.jpg" width="520" alt="Wide-body aircraft design study">
+<img src="../figures/misc/proj_a380.jpg" width="560" alt="Wide-body aircraft conceptual design study">
 
-## The aircraft
-
-| Parameter | Value |
+| | |
 |---|---|
-| Passengers | 530 |
-| Cruise Mach number | 0.86 |
-| Configuration | Wide-body, twin-aisle |
+| **Aircraft** | 530 passengers, Mach 0.86, wide-body twin-aisle |
+| **Tools** | Raymer's RDS, Datcom, CATIA V5 |
 
 ## Method
 
-Full conceptual design cycle: mission definition, initial sizing, configuration layout, aerodynamic
-build-up, weights, performance and stability, using **Raymer's RDS**, **Datcom** for stability and
-control derivatives, and **CATIA V5** for the configuration model.
+Full conceptual design cycle, carried through in the order that makes each step answerable:
+
+1. Mission definition and initial sizing from statistical empty weight fractions
+2. Configuration layout and cabin arrangement
+3. Aerodynamic build-up, parasite and induced drag across the envelope
+4. Component weight estimation and iteration to a converged take-off weight
+5. Performance against the design mission
+6. Stability and control derivatives from **Datcom**, checked longitudinally and directionally
+7. Configuration model in **CATIA V5**
 
 ## Outcome
 
 A converged wide-body configuration with a documented design rationale, sized against its mission and
-checked for longitudinal and directional stability across the envelope.
+checked for stability across the envelope.
+
+## What I would do differently
+
+This study predates the SKYLIGHT work by two years, and the difference is instructive. EH-5963 was
+sized with statistical methods and checked; [SKYLIGHT](skylight-midsize-airliner.md) was sized
+statistically, then **re-sized with physics-based synthesis** when the statistical prediction proved
+unreliable. The second approach is the one I would use now, and the first is where I learned why.
+
+## Relevance
+
+The foundation for the conceptual design work that follows it, and a useful marker of how the method
+changed once I had a tool that could disagree with the statistics.
+
+[Back to portfolio](../README.md)

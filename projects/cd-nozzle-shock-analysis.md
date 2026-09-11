@@ -1,23 +1,46 @@
 # Shock structure in a convergent-divergent nozzle
 
-**Sep 2023 to Nov 2023 · compressible aerodynamics, Institute of Space Technology**
+**Compressible aerodynamics, Institute of Space Technology · September to November 2023**
 
-<img src="../images/proj_nozzle.jpg" width="360" alt="Convergent-divergent nozzle shock structure">
+<img src="../figures/misc/proj_nozzle.jpg" width="360" alt="Shock structure in the convergent divergent nozzle">
 
-## Objective
+| | |
+|---|---|
+| **Context** | Computational investigation of internal compressible flow in an indigenously designed nozzle |
+| **Tools** | ANSYS Fluent, density-based compressible solver |
+| **Review** | Method and results reviewed and approved by fluid dynamics faculty |
 
-Computational investigation of internal compressible aerodynamics in an indigenously designed
-convergent-divergent nozzle, focused on the formation and interaction of oblique and normal shocks.
+## 1. Objective
 
-## Method
+Study the formation and interaction of **oblique and normal shocks** inside a convergent-divergent
+nozzle at off-design pressure ratio, and their effect on the flow state from inlet through throat to
+exit.
 
-- ANSYS Fluent, compressible flow, density-based solver
-- Shock formation and propagation traced from inlet through throat to exit
-- Effect on flow parameters analysed region by region, including total pressure loss across the
-  shock system
-- Results reviewed and approved by fluid dynamics faculty
+## 2. Method
 
-## Outcome
+- Density-based compressible solver in ANSYS Fluent, appropriate to a shock-dominated internal flow
+- Shock formation and propagation traced through the divergent section
+- Flow parameters analysed region by region: inlet, throat, exit, including total pressure loss across
+  the shock system
+- Results reviewed and approved by fluid dynamics faculty before submission
 
-A clear picture of how the oblique and normal shock system sets the exit condition of the nozzle, and
-of how far the design deviates from ideal isentropic expansion at off-design pressure ratio.
+## 3. Outcome
+
+A clear picture of how the oblique and normal shock system sets the exit condition, and of how far the
+design departs from ideal isentropic expansion when it is operated away from its design pressure
+ratio.
+
+## 4. What I would do differently
+
+- **A mesh convergence study in the shock region.** Shock position is grid sensitive, and shock
+  position is the whole result.
+- **Sweep the pressure ratio.** One off-design condition shows the shock system exists. A sweep would
+  show where it moves and where the nozzle becomes unusable, which is the design-relevant answer.
+
+## 5. Relevance
+
+Compressible and shock-dominated flow, and the habit of tying a computed field back to the
+one-dimensional theory that should predict it. Foundation for gas turbine and high-speed propulsion
+work.
+
+[Back to portfolio](../README.md)

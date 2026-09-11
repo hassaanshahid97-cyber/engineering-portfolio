@@ -1,25 +1,36 @@
 # KIRA-9 propeller-driven UAV
 
-**Jan 2024 to Feb 2024 · national competition build, Institute of Space Technology**
+**National competition build, Institute of Space Technology · January to February 2024**
 
-## The aircraft
+| | |
+|---|---|
+| **Aircraft** | Single-engine high-wing competition aircraft |
+| **Timescale** | Designed, built and flown inside two months |
 
-A single-engine high-wing competition aircraft, designed, built and flown inside a two-month window.
+## Build
 
 | Item | Implementation |
 |---|---|
-| Configuration | Single-engine, high wing, propeller driven |
+| Configuration | Single engine, high wing, propeller driven |
 | Structure | Carbon fibre and XPS foam |
-| Wing | Custom wing spars sized for the competition load case |
+| Wing | Custom spars sized for the competition load case |
 | Status | Built and flown |
 
-## Context
+## The constraint that shapes every decision
 
-Part of the national Design-Build-Fly competition cycle in which the team took first place in 2023
-and 2024. The constraint that shapes every decision in a build like this is the calendar: the
-airframe has to be manufacturable and repairable by the same people who designed it, within weeks.
+The calendar. In a two-month design-build-fly cycle the airframe has to be manufacturable and
+repairable by the same people who designed it, using what is in the workshop. That rules out
+configurations that are aerodynamically better and structurally slower, and it rewards a design whose
+failure modes are repairable between flights.
 
-## Skills demonstrated
+This build sits inside the competition cycle in which the team took **first place in the National
+Design-Build-Fly Competition in 2023 and 2024**.
 
-Rapid design-build-fly iteration, composite and foam construction, spar sizing, and flight test under
-competition rules.
+<img src="../figures/misc/award_ndbfc18.jpg" width="300" alt="National Design-Build-Fly Competition"> <img src="../figures/misc/award_ndbfc17.jpg" width="190" alt="National Design-Build-Fly Competition">
+
+## Relevance
+
+Rapid iteration under a hard deadline, composite and foam construction, spar sizing, and flight test
+under competition rules.
+
+[Back to portfolio](../README.md)
