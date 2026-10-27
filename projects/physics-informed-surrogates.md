@@ -1,11 +1,11 @@
 # Physics-informed surrogates with calibrated error bounds
 
-**Independent research · June to August 2026 · sole-authored preprint**
+**Independent research · June to August 2026 · sole-authored, under review**
 
 | | |
 |---|---|
 | **Context** | Self-directed, unsupervised, over one summer between semesters |
-| **Output** | Sole-authored preprint, submitted to a peer-reviewed journal August 2026, not yet reviewed |
+| **Output** | Sole-authored paper, *Seed Variance and Calibrated Constraint Bounds for Physics-Informed Surrogates in Thermal Decision Loops*, under review at *Engineering Applications of Artificial Intelligence* (Elsevier). The Zenodo preprint carries the earlier working title |
 | **DOI** | [10.5281/zenodo.21788995](https://doi.org/10.5281/zenodo.21788995) |
 | **Code** | [scramjet-pinn-surrogate](https://github.com/hassaanshahid97-cyber/scramjet-pinn-surrogate), MIT, manuscript CC BY 4.0 |
 | **Stack** | JAX with automatic differentiation, NumPy, SciPy, LaTeX |
@@ -210,7 +210,7 @@ silently disagree with the text.
 
 This is the same loop that a physics-informed inverse problem needs: a verified forward model, a
 learned surrogate whose variance is measured, and a bound whose coverage is checked in the loop where
-the number is actually used. I ran it alone, to a submitted manuscript, in one summer.
+the number is actually used. I ran it alone, to a manuscript now under review, in one summer.
 
 [Code and audit script](https://github.com/hassaanshahid97-cyber/scramjet-pinn-surrogate) ·
 [Preprint](https://doi.org/10.5281/zenodo.21788995) ·

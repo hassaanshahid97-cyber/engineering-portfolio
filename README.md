@@ -10,7 +10,7 @@
 Scientific machine learning · CFD and aerodynamics · aircraft conceptual design · flight systems and UAV test
 
 [![Thesis](https://img.shields.io/badge/master%20thesis%2030%20hp-available%20Jan%20to%20Jun%202027-success?style=flat-square)](docs/thesis-readiness.md)
-[![Preprint](https://img.shields.io/badge/sole--authored%20preprint-10.5281%2Fzenodo.21788995-blue?style=flat-square)](https://doi.org/10.5281/zenodo.21788995)
+[![Paper 1](https://img.shields.io/badge/paper%201-under%20review%2C%20EAAI-blue?style=flat-square)](https://doi.org/10.5281/zenodo.21788995)
 [![Site](https://img.shields.io/badge/site-hassaanshahid97--cyber.github.io-0b5394?style=flat-square)](https://hassaanshahid97-cyber.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-hassaan--shahid-0a66c2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hassaan-shahid-b1b285280)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0003--7403--8933-a6ce39?style=flat-square&logo=orcid&logoColor=white)](https://orcid.org/0009-0003-7403-8933)
@@ -26,7 +26,7 @@ CFD, or simulation for flight systems. Here is the evidence that I can run one a
 
 | What a 30 hp thesis demands | Where I have already done it |
 |---|---|
-| **Work independently for 20 weeks** | Posed, solved, verified and wrote up a physics-informed surrogate study alone over one summer, from problem statement to submitted manuscript. [Case study](projects/physics-informed-surrogates.md) |
+| **Work independently for 20 weeks** | Posed, solved, verified and wrote up a physics-informed surrogate study alone over one summer, from problem statement to a manuscript now under review at Engineering Applications of Artificial Intelligence. [Case study](projects/physics-informed-surrogates.md) |
 | **Verify before you believe** | Reference solver verified two independent ways: exact nonlinear steady solution by Kirchhoff transform, agreeing to 7.3e-10 K, and method of manufactured solutions at observed order 2.00 in space. [How I verify](docs/verification-practice.md) |
 | **Report honestly** | Measured run-to-run variance across twelve seeded runs instead of one lucky seed, showed my own accurate surrogate broke the limit on 14.4 per cent of manoeuvres, and published the regime where the method loses. |
 | **Write reproducible code** | Full study reproduces in under two core-hours, MIT licensed, with an audit script that re-checks 104 quantitative claims against stored results. |
@@ -40,14 +40,15 @@ CFD, or simulation for flight systems. Here is the evidence that I can run one a
 
 ## Projects
 
-Fifteen projects, grouped by discipline. The first column links to a full case study with problem,
+Sixteen projects, grouped by discipline. The first column links to a full case study with problem,
 method, setup numbers, verification, results and limitations.
 
 ### Scientific machine learning and numerical methods
 
 | Project | Headline result | Evidence |
 |---|---|---|
-| **[Physics-informed surrogates with calibrated error bounds](projects/physics-informed-surrogates.md)** | Physics residual cut seed-to-seed error standard deviation from 12.42 K to 0.27 K, a **factor of about 45**; used as a hard constraint the surrogate violated the limit on **14.4 per cent** of manoeuvres, and a split-conformal allowance restored the nominal 5 per cent | [preprint](https://doi.org/10.5281/zenodo.21788995) · [code](https://github.com/hassaanshahid97-cyber/scramjet-pinn-surrogate) |
+| **[Physics-informed surrogates with calibrated error bounds](projects/physics-informed-surrogates.md)** | Physics residual cut seed-to-seed error standard deviation from 12.42 K to 0.27 K, a **factor of about 45**; used as a hard constraint the surrogate violated the limit on **14.4 per cent** of manoeuvres, and a split-conformal allowance brought it to **5.8 per cent** against a 5 per cent target. Under review, EAAI | [preprint](https://doi.org/10.5281/zenodo.21788995) · [code](https://github.com/hassaanshahid97-cyber/scramjet-pinn-surrogate) |
+| **[Bondline-temperature-constrained entry guidance](projects/reentry-guidance.md)** | Heat-shield-aware entry guidance for a Shuttle-class vehicle: structure tolerates an **8 K / 12 K** warmer start at 2 g / 2.5 g, and the share of 1000 Monte Carlo flights above 449.8 K fell from **5.8 to 3.4 per cent**. In preparation, AIAA JGCD | on request |
 | **[Micro gas turbine design and performance code](projects/uav-gas-turbine-code.md)** | Offline C++ and NPSS tool answering "can this airframe, with this engine, clear the obstacle at this weight?", benchmarked on the AMT Olympus HP 230N. Nominated Best Final Year Project | [archive](https://doi.org/10.5281/zenodo.21805835) · [code](https://github.com/hassaanshahid97-cyber/uav-gas-turbine-performance-tool) |
 
 ### CFD and aerodynamics
@@ -97,8 +98,8 @@ under supervision or on a single project; **aware** means I can read it and woul
 
 | Capability | Level | Where |
 |---|---|---|
-| Physics-informed neural networks, JAX, automatic differentiation | Used in anger | Preprint, sole-authored |
-| Conformal prediction and uncertainty quantification | Used in anger | Preprint, split-conformal allowance in closed loop |
+| Physics-informed neural networks, JAX, automatic differentiation | Used in anger | Paper 1, sole-authored, under review |
+| Conformal prediction and uncertainty quantification | Used in anger | Both papers, split-conformal margins checked in closed loop and over 1000 Monte Carlo flights |
 | Finite volume PDE solvers, nonlinear transient | Used in anger | Reference solver written and verified from scratch |
 | Verification by manufactured solutions, convergence studies | Used in anger | Preprint, RANS study |
 | ANSYS Fluent, RANS, turbulence model selection, near-wall meshing | Used in anger | TMMV08, nozzle study |
@@ -152,7 +153,7 @@ numbers are in the result, because a design decision needs both.
 
 | | |
 |---|---|
-| **Publication** | Shahid, H. (2026). *Seed Variability and Calibrated Error Bounds for Physics-Informed Conjugate Heat Transfer Surrogates.* Zenodo. [10.5281/zenodo.21788995](https://doi.org/10.5281/zenodo.21788995). Sole-authored, submitted to a peer-reviewed journal August 2026, not yet reviewed |
+| **Publications** | Shahid, H. (2026). *Seed Variance and Calibrated Constraint Bounds for Physics-Informed Surrogates in Thermal Decision Loops.* Under review, *Engineering Applications of Artificial Intelligence* (Elsevier). Preprint, earlier working title: [10.5281/zenodo.21788995](https://doi.org/10.5281/zenodo.21788995). Shahid, H. (2026). *Bondline-Temperature-Constrained Entry Guidance from the Heat-Load-Optimal Drag Profile.* In preparation, *AIAA Journal of Guidance, Control, and Dynamics* |
 | **Archive** | Shahid, H. and Sabir, M. B. (2025). Micro gas turbine design and performance code. Zenodo. [10.5281/zenodo.21805835](https://doi.org/10.5281/zenodo.21805835) |
 | **Competitions** | Winner, National Design-Build-Fly Competition, 2023 and 2024. Runner-up, UCP Taakra AeroDesign, 2023. Nominated, Best Final Year Project 2025, IST |
 | **Licences** | EASA UAS A1/A3 Open Subcategory remote pilot, valid to 2031. Certified Engineer Aerospace, Sveriges Ingenjörer, SeQF level 6. Registered aeronautical engineer, Pakistan Engineering Council |

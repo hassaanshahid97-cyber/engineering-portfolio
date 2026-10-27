@@ -1,4 +1,4 @@
-# Master thesis readiness, January to June 2027
+# Master thesis readiness, from January 2027
 
 [Back to portfolio](../README.md)
 
@@ -14,7 +14,7 @@
 | **Language** | English fluent, IELTS 7.5, CEFR C1. Swedish A2 and improving, studying SFI at Linköping kommun. Comfortable in a Swedish-speaking workplace as long as technical work is in English |
 | **Coursework finished before the thesis starts** | Machine Learning for Mechanical Engineering, Computational Fluid Dynamics, Gas Turbine Engines, Aircraft Systems Engineering Project, Model-based System-of-Systems Engineering, Prototype Realization |
 | **Security and confidentiality** | Willing to work under NDA and to publish a redacted thesis where the host requires it |
-| **What I bring on day one** | A finished, sole-authored study of the same shape as a thesis: problem posed, solver written and verified, surrogate trained, results calibrated, manuscript submitted |
+| **What I bring on day one** | A finished, sole-authored study of the same shape as a thesis: problem posed, solver written and verified, surrogate trained, results calibrated, manuscript under review. A second sole-authored paper in preparation |
 
 ---
 
@@ -25,74 +25,61 @@ No direction below claims readiness I cannot evidence.
 
 ---
 
-### 1. Scientific machine learning for physics-informed inverse problems
+### 1. Robust design margins and uncertainty quantification
 
-**Examples:** synthetic aperture radar imaging, electromagnetic scattering, non-destructive
-evaluation, any ill-posed reconstruction with a PDE forward model.
+**Examples:** turning uncertainty into design margins, probabilistic and sensitivity analysis,
+robust design optimization, surrogate-assisted design under constraints.
 
-**Why me.** This is the loop I have already closed end to end, on a different physics:
-a verified PDE forward model, a learned surrogate trained in JAX with automatic differentiation,
-and a calibrated statement of how far the reconstruction can be trusted. Specifically:
+**Why me.** Both of my papers are about this question. In Paper 1 a coolant scheduler that optimised
+against a surrogate broke its stress limit in **14.4 per cent** of decisions, because the optimiser
+seeks out the surrogate's optimistic errors; a split-conformal margin brought this to **5.8 per cent**
+against a 5 per cent target, and a margin calibrated only near the constraint boundary failed at
+13.2 per cent. In Paper 2 a calibrated margin held **0.952** coverage over 1000 Monte Carlo flights
+under guidance feedback, and I measured how much each main uncertainty moved the outcome.
 
-- Non-dimensionalised residuals and hard-constrained initial conditions, so **no loss weight needed
-  tuning**, which is the failure mode that sinks most physics-informed work
-- **Twelve replicated runs** to separate a mean effect from a variance effect
-- A **split-conformal** allowance validated in closed loop, not assumed
-- Full study reproduces in **under two core-hours**
+**What I would ramp up.** Industrial robustness tools such as optiSLang, and the geometric and
+material scatter of manufactured components.
 
-**What I would ramp up in the first three weeks.** Electromagnetic wave scattering formulations and
-the SAR imaging chain, which I have read into but not yet worked with. Ill-posedness and
-regularisation theory beyond what I applied in the conjugate heat transfer setting. GPU programming
-for the forward solve: I have trained on GPU but have not written high-performance kernels.
-
-**What a supervisor gets in 20 weeks.** A verified forward model, a surrogate with measured
-seed-to-seed variance rather than a single reported number, and a bound whose coverage is checked
-rather than claimed.
-
-[Evidence: physics-informed surrogates case study](../projects/physics-informed-surrogates.md)
+[Evidence: surrogates case study](../projects/physics-informed-surrogates.md) ·
+[entry guidance](../projects/reentry-guidance.md)
 
 ---
 
-### 2. Surrogate modelling and uncertainty quantification for propulsion and thermal limits
+### 2. Gas turbine performance, test data and model-based correction
 
-**Examples:** real-time limit protection, digital twins of hot structures, life usage monitoring,
-fast models inside a control loop.
+**Examples:** performance calculation and correction, comparing thermodynamic models with test data,
+mission and cycle studies, low-order compressor models.
 
-**Why me.** The preprint is exactly this problem in miniature. The surrogate was placed inside a
-scheduler as a hard constraint, and the interesting result is negative and useful: an accurate
-surrogate was **not** a safe one until a calibrated allowance was added. I also have the propulsion
-side: a Brayton cycle tool with compressor and turbine maps, benchmarked against manufacturer test
-data for the AMT Olympus HP 230N, and a second-by-second mission simulator built around it.
+**Why me.** My degree project was a C++ and NPSS design and performance code with compressor and
+turbine maps, benchmarked against manufacturer test data for the AMT Olympus HP 230N, with a
+second-by-second mission simulator built around it. At NaqCoDE I compared models with rig data in real
+time and traced each mismatch to the model, the sensors or the data link. Coursework: Turbo Machinery,
+Thermodynamics and Gas Turbine Engines.
 
-**What I would ramp up.** Industrial life and damage models. Real-time and embedded deployment
-constraints, where my experience is the Iron Bird rig rather than certified software.
-
-**What a supervisor gets in 20 weeks.** A surrogate with a defensible error budget, and an honest
-answer to "how wrong is this allowed to be before the limit protection stops protecting".
+**What I would ramp up.** Field performance test procedures (ASME PTC 22, ISO 2314) in practice,
+industrial test databases, and FMU-based engine models.
 
 [Evidence: gas turbine code](../projects/uav-gas-turbine-code.md) ·
-[surrogates](../projects/physics-informed-surrogates.md)
+[HIL rig](../projects/hil-iron-bird.md)
 
 ---
 
-### 3. Machine learning applied to CFD
+### 3. CFD and heat transfer
 
-**Examples:** reduced order models for external aerodynamics, data-driven turbulence closure
-augmentation, surrogate-assisted shape optimisation.
+**Examples:** turbomachinery and cooling flows, conjugate heat transfer, CFD methodology and
+validation, reduced-order and ML-assisted models.
 
-**Why me.** I have both halves and they rarely appear together in a student. On the CFD side:
-steady RANS at Re = 588,000 on a **3.2 million element** near-wall mesh at y+ < 5, with a k-epsilon
-against k-omega SST comparison run before any geometry conclusion was drawn, and grid and time-step
-convergence studies. On the ML side, the preprint. I am taking Computational Fluid Dynamics and
-Machine Learning for Mechanical Engineering in the year before the thesis.
+**Why me.** Steady RANS at Re = 588,000 on a **3.2 million element** near-wall mesh at y+ < 5, with a
+k-epsilon against k-omega SST comparison and convergence studies before any conclusion. A transient
+conduction solver for a 1 mm Inconel 718 wall, verified against exact and manufactured solutions.
+B.Sc. Heat Transfer, Thermodynamics, Fluid Mechanics and Compressible Aerodynamics, with heat transfer,
+aerodynamics, propulsion and instrumentation labs.
 
-**What I would ramp up.** Large training data pipelines from CFD, which is an engineering problem of
-its own. Adjoint methods, which I understand in principle and have not implemented.
+**What I would ramp up.** CFX and Star-CCM+, IR thermography and PIV in a lab, and adjoint methods,
+which I understand in principle and have not implemented.
 
-**What a supervisor gets in 20 weeks.** A model trained on data whose own numerical error is known,
-because the convergence study came first.
-
-[Evidence: RANS spoiler study](../projects/vehicle-aero-rans-spoiler.md)
+[Evidence: RANS spoiler study](../projects/vehicle-aero-rans-spoiler.md) ·
+[surrogates](../projects/physics-informed-surrogates.md)
 
 ---
 
@@ -121,8 +108,8 @@ disagree, and will chase the discrepancy rather than tune it away.
 
 Stated plainly, because a supervisor finding this out in week six is worse than reading it now.
 
-- I have **not** worked with synthetic aperture radar data or electromagnetic solvers. I have read
-  into the area and named it as a target, which is not the same thing.
+- I have **not** used IR thermography, PIV or electromagnetic solvers, and have not taken part in an
+  industrial field performance test.
 - I have **not** written GPU kernels or run on an HPC cluster. My work reproduces on a laptop in two
   core-hours by design, which is a different skill from scaling up.
 - My **C++** is working knowledge, used for the degree project tool. My production language is Python.
@@ -140,5 +127,5 @@ aircraft.
 [LinkedIn](https://www.linkedin.com/in/hassaan-shahid-b1b285280) ·
 [hassaanshahid97-cyber.github.io](https://hassaanshahid97-cyber.github.io)
 
-Happy to send the full CV, transcripts, the preprint, or a short call to talk through whether the
+Happy to send the full CV, transcripts, either paper, or a short call to talk through whether the
 problem you have in mind is a fit.
